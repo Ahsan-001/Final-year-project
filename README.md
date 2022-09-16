@@ -1,4 +1,4 @@
-# business_card_app
+# Profilo
 
 A new Flutter project.
 
