@@ -1,6 +1,6 @@
 # Profilo
 
-A new Flutter project.
+NFC base information - business card application.
 
 ## Getting Started
 
