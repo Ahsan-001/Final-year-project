@@ -4,6 +4,7 @@ import 'package:busniess_card_app/Controllers/saved_user_controller.dart';
 import 'package:busniess_card_app/Controllers/user_controller.dart';
 import 'package:busniess_card_app/Services/dynamiclink_service.dart';
 import 'package:busniess_card_app/Utils/global_veriables.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,7 @@ class AuthCheckBinding implements Bindings {
       debugPrint('----USER FOUND ${userID.value}');
       Get.put(UserController());
     } else {
-      DynamicLink().handleDynamicLinks();
+      if (!kIsWeb) DynamicLink().handleDynamicLinks();
       isSigned.value = false;
       debugPrint('-----USER NOT FOUND-----');
     }

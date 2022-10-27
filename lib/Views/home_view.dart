@@ -59,7 +59,7 @@ class HomeView extends StatelessWidget {
                   // IconButton(onPressed: () {}, icon: Icon(Icons.people)),
                   // SizedBox(width: 5),
                   kIsWeb
-                      ? SizedBox()
+                      ? const SizedBox()
                       : GestureDetector(
                           onTap: () {
                             Get.to(
@@ -112,7 +112,7 @@ class HomeView extends StatelessWidget {
                         return Container(
                           height: 240,
                           width: double.infinity,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: backgroundColor,
 
                             // image: DecorationImage(

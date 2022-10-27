@@ -69,6 +69,7 @@ class DynamicLink {
         }
       }
     }, onError: (OnLinkErrorException e) async {
+      print("Here:is Error" + e.toString());
       print(e.message);
     });
   }

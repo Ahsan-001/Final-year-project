@@ -1,4 +1,6 @@
 import 'package:busniess_card_app/Controllers/user_controller.dart';
+import 'package:busniess_card_app/Utils/AppTextStyleAndColors/appColors.dart';
+import 'package:busniess_card_app/Utils/AppTextStyleAndColors/appTextStyle.dart';
 import 'package:busniess_card_app/Utils/colors.dart';
 import 'package:busniess_card_app/Views/home_view.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,7 +9,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nfc_manager/nfc_manager.dart';
-
 import 'package:url_launcher/url_launcher.dart';
 
 class ActivateNFCview extends StatelessWidget {
@@ -39,11 +40,7 @@ class ActivateNFCview extends StatelessWidget {
                     child: Text(
                       'Your Tag will be activated with the profile link',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: kBrightColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: h18HeadingWhiteBold,
                     ),
                   ),
                   const SizedBox(height: 15),
@@ -78,10 +75,7 @@ class ActivateNFCview extends StatelessWidget {
                       ),
                       child: Text(
                         userController.userGetter!.dynamicLink!,
-                        style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
+                        style: h15HeadingWhiteBold,
                       ),
                     ),
                   ),
@@ -101,10 +95,7 @@ class ActivateNFCview extends StatelessWidget {
                               Lottie.asset('assets/scan_animation.json'),
                               const Text(
                                 "Hold a Profilo to the middle back of your phone to write the Tag.",
-                                style: TextStyle(
-                                  fontSize: 15.0,
-                                  color: kBrightColor,
-                                ),
+                                style: h15HeadingWhiteSimple,
                               ),
                               const SizedBox(
                                 height: 15,
@@ -112,7 +103,7 @@ class ActivateNFCview extends StatelessWidget {
                               Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color: Colors.grey,
+                                  color: greyColor,
                                 ),
                                 width: Get.width * 0.9,
                                 child: MaterialButton(
@@ -121,10 +112,7 @@ class ActivateNFCview extends StatelessWidget {
                                   ),
                                   child: const Text(
                                     "Cancel",
-                                    style: const TextStyle(
-                                      color: kBrightColor,
-                                      fontSize: 18,
-                                    ),
+                                    style: h18HeadingWhiteSimple,
                                   ),
                                 ),
                               ),

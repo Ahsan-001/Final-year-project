@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+// ignore: must_be_immutable
 class ChangePassword extends StatelessWidget {
   ChangePassword({Key? key}) : super(key: key);
   var isLoading = false.obs;
@@ -42,7 +43,7 @@ class ChangePassword extends StatelessWidget {
                   const SizedBox(height: 10),
                   Container(
                     alignment: Alignment.center,
-                    child: Text(
+                    child: const Text(
                       "Change Password?",
                       style: TextStyle(
                           fontSize: 22,

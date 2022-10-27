@@ -7,7 +7,6 @@ import 'package:busniess_card_app/Utils/global_veriables.dart';
 import 'package:busniess_card_app/Views/Authentication/login_view.dart';
 import 'package:busniess_card_app/Views/home_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -28,10 +27,11 @@ class AuthController extends GetxController {
     try {
       UserCredential _authResult = await auth.createUserWithEmailAndPassword(
           email: email.trim(), password: password);
-      String? link;
-      if (!kIsWeb) {
-        link = await DynamicLink().createDynamicLink(_authResult.user!.uid);
-      }
+      String link =
+          await DynamicLink().createDynamicLink(_authResult.user!.uid);
+      // if (!kIsWeb) {
+      //   link = await DynamicLink().createDynamicLink(_authResult.user!.uid);
+      // }
       UserModel _userModel = UserModel(
         id: _authResult.user!.uid,
         name: name,
@@ -205,6 +205,7 @@ class AuthController extends GetxController {
         colorText: kBrightColor,
       );
     } catch (error) {
+      print("Google:" + error.toString());
       Get.snackbar(
         'Failed',
         error.toString(),

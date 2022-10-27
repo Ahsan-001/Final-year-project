@@ -12,6 +12,7 @@ import 'package:image_picker/image_picker.dart';
 
 import '../main.dart';
 
+// ignore: must_be_immutable
 class EditView extends StatelessWidget {
   EditView({Key? key}) : super(key: key);
 
